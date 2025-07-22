@@ -1,3 +1,4 @@
+export function generateStaticParams() { return []; }
 import { getServerSession } from "next-auth";
 import { authOptions } from "@/lib/auth";
 import { PrismaClient } from "@prisma/client";
