@@ -3,7 +3,7 @@ import { authOptions } from "@/lib/auth";
 import { PrismaClient } from "@prisma/client";
 import { redirect } from "next/navigation";
 
-export default async function DeleteProductPage({ params }: { params: { id: string } }) {
+export default async function Page({ params }: { params: { id: string } }) {
   const session = await getServerSession(authOptions);
   // @ts-expect-error: custom user object
   if (!session?.user?.isAdmin) {
