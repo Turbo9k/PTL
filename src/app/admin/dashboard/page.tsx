@@ -31,7 +31,6 @@ export default async function AdminDashboard() {
             </tr>
           </thead>
           <tbody>
-            {/* @ts-expect-error: any type for product */}
             {products.map((product: any) => (
               <tr key={product.id} className="border-t">
                 <td className="p-2">{product.name}</td>
@@ -60,7 +59,6 @@ export default async function AdminDashboard() {
             </tr>
           </thead>
           <tbody>
-            {/* @ts-expect-error: any type for order */}
             {orders.map((order: any) => (
               <tr key={order.id} className="border-t">
                 <td className="p-2">{order.id}</td>
@@ -68,7 +66,6 @@ export default async function AdminDashboard() {
                 <td className="p-2">${(order.total / 100).toFixed(2)}</td>
                 <td className="p-2">{order.status}</td>
                 <td className="p-2">
-                  {/* @ts-expect-error: any type for item */}
                   {order.orderItems.map((item: any) => (
                     <div key={item.id}>{item.product.name} x{item.quantity}</div>
                   ))}
