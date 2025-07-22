@@ -27,14 +27,12 @@ export const authOptions: AuthOptions = {
   callbacks: {
     async session({ session, token }) {
       if (token) {
-        // @ts-expect-error: custom user object
         session.user = token.user as any;
       }
       return session;
     },
     async jwt({ token, user }) {
       if (user) {
-        // @ts-expect-error: custom user object
         token.user = user as any;
       }
       return token;
